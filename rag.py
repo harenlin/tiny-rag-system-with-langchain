@@ -29,14 +29,14 @@ def parse_args():
 
 def main():
     args = parse_args()    
-    query_text = args.query_text
+    query = args.query
 
     # db preparation
     embedding_function = OpenAIEmbeddings()
     db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
     # db searching
-    results = db.similarity_search_with_relevance_scores(query_text, k=3)
+    results = db.similarity_search_with_relevance_scores(query, k=3)
     if len(results) == 0 or results[0][1] < 0.7: # early stopping
         print(f"Unable to find matching results.")
         return
@@ -46,7 +46,7 @@ def main():
 
     # rag prompt
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
-    prompt = prompt_template.format(context=context_text, question=query_text)
+    prompt = prompt_template.format(context=context_text, question=query)
     print(prompt)
 
     # text generation
