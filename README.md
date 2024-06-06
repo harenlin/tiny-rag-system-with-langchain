@@ -1,5 +1,17 @@
 # Tiny Retrieval Augmented Generation System with LangChain
 ### HOW TO RUN
+#### Part 1. Using Docker
+1. Create the image.
+```
+docker build -t rag-app .
+```
+
+2. Run the container based on the image created.
+```
+docker run --rm rag-app --query "What is builder design pattern?"
+```
+
+#### Part 2. Using local or virtual environment.
 1. Install the requirement packages.
 ```
 pip3 install -r requirement.txt
