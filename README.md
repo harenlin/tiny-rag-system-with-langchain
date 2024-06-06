@@ -8,4 +8,12 @@
 pip3 install -r requirement.txt
 ```
 
-2. 
+2. Set up Chroma database for our corpus. (Make sure you modified the ```data``` directory to store the files.)
+```
+python3 create_db.py
+```
+
+3. Input the query and run the RAG application.
+```
+python3 rag.py --query "What is builder design pattern?"
+```

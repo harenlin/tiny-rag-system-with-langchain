@@ -22,7 +22,7 @@ Answer the question based on the above context: {question}
 
 def parse_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--query_text", type=str, help="Input query (textual content).")
+    parser.add_argument("--query", type=str, help="Input query (textual content).")
     args = parser.parse_args()
     return args
 
@@ -55,7 +55,7 @@ def main():
 
     # source notation
     sources = [doc.metadata.get("source", None) for doc, _score in results]
-    formatted_response = f"Response: {response_text}\nSources: {sources}"
+    formatted_response = f"\n\nResponse: {response_text}\nSources: {sources}"
     print(formatted_response)
 
 
