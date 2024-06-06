@@ -1,7 +1,4 @@
 # Tiny Retrieval Augmented Generation System with LangChain
-### Reference
-[Youtube Video - RAG + Langchain Python Project: Easy AI/Chat For Your Docs](https://www.youtube.com/watch?v=tcqEUSNCn8I)
-
 ### HOW TO RUN
 1. Install the requirement packages.
 ```
@@ -17,3 +14,7 @@ python3 create_db.py
 ```
 python3 rag.py --query "What is builder design pattern?"
 ```
+
+### Reference
+1. [Youtube Video - RAG + Langchain Python Project: Easy AI/Chat For Your Docs](https://www.youtube.com/watch?v=tcqEUSNCn8I)
+2. [Design Patterns](https://github.com/kamranahmedse/design-patterns-for-humans)
