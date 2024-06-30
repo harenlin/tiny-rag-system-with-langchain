@@ -42,7 +42,7 @@ def main():
         return
 
     # retrieval results
-    context_text = "\n\n---\n\n".join([doc.page_content for doc, _score in results])
+    context_text = "\n\n---\n\n".join([doc.page_content for doc, score in results])
 
     # rag prompt
     prompt_template = ChatPromptTemplate.from_template(PROMPT_TEMPLATE)
